@@ -1,0 +1,16 @@
+
+services:
+  remotato:
+    build:
+      context: .
+    # networks:
+      # - remotato-net
+    deploy:
+      replicas: 3
+    ports:
+      - "2222-2224:22"  # SSH ports for remotatos
+    
+# networks:
+  # remotato-net:
+    # driver: bridge
+
