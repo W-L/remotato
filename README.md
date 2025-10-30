@@ -9,7 +9,7 @@ Deploy little docker containers with ssh servers to simulate VMs.
 
 generate ssh keys for passwordless ssh access
 
-`ssh-keygen -t rsa -f remotato_key`
+`ssh-keygen -t rsa -f id_rsa && cp id_rsa* ~/.ssh`
 
 
 build & launch containers (3 by default, edit docker-compose to change)
@@ -19,7 +19,7 @@ build & launch containers (3 by default, edit docker-compose to change)
 
 ssh into a container (default ports are 2222 - 2224)
 
-`ssh user@localhost -p 2222 -i remotato_key`
+`ssh user@localhost -p 2222`
 
 
 
